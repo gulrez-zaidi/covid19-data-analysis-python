@@ -1,6 +1,6 @@
 # 🦠 COVID-19 Data Analysis using Python
 
-A complete Exploratory Data Analysis (EDA) and visualization project on global COVID-19 data using Python, Pandas, Matplotlib, and Seaborn.
+A complete Exploratory Data Analysis (EDA) and visualization project on global COVID-19 data using Python, Pandas, Numpy and Matplotlib.
 This project answers key analytical questions about the spread, impact, and recovery trends of COVID-19 across different countries and time periods.
 
 ## 📌 Project Overview
@@ -28,7 +28,7 @@ df.head()
 ```
 
 ## 🎯 Key Tasks Completed
-### Task 1: 3 Most Affected Countries
+### Task 1: Explore and visualize the 3 countries most affected in terms of Confirmed Cases and Deaths.
 ```
 import matplotlib.pyplot as plt
 import numpy as np
@@ -64,7 +64,7 @@ plt.legend()
 plt.show()
 ```
 
-### Task 2: Top 10 Countries with Highest Recovered Cases
+### Task 2: Explore top 10 countries with most recovered cases.
 ```
 df2 = df.groupby('Country')['Recovered'].sum().sort_values(ascending=False).head(10)
 
@@ -81,7 +81,7 @@ plt.legend()
 plt.show()
 ```
 
-### Task 3: Recovery Rate Summary (Country-wise)
+### Task 3: Summary of recovery rates for each country.
 
 ***Calculate the recovery rate for each country using the formula: Recovery Rate=(Recovered Cases/Confirmed Cases)×100***
 ```
@@ -89,7 +89,7 @@ df["Recovery Rate"]=(df["Recovered"]/df["Confirmed"])*100
 df
 ```
 
-### Task 4: Top 5 Countries with Highest Recovery Rates
+### Task 4: Visualize the top 5 countries with the highest recovery rates.
 ```
 df3 = df.groupby('Country')['Recovery Rate'].sum().sort_values(ascending=False).head(5)
 
@@ -106,7 +106,7 @@ plt.legend()
 plt.show()
 ```
 
-### Task 5: Month-wise Trend Analysis
+### Task 5: Monthly Trend of COVID-19 Cases
 ```
 df['Month'] = df['ObservationDate'].dt.to_period('M')
 df
@@ -136,7 +136,7 @@ plt.tight_layout()
 plt.show() 
 ```
 
-### Task 6: Year-wise COVID-19 Trend
+### Task 6: Make a chart to show overall (year-wise) COVID-19 data: death, confirmed, and recovery.
 ```
 df['Year'] = df['ObservationDate'].dt.year
 df
@@ -166,7 +166,8 @@ plt.tight_layout()
 plt.show()
 ```
 
-### Task 7: Country Summary Function
+### Task 7: Write a function to display COVID-19 summary statistics for any given country.
+
 ```
 CFR=(Deaths/Confirmed Cases)*100
 df['CFR']=df['Deaths']/df['Confirmed']*100
@@ -201,7 +202,7 @@ def country_summary(country):
     print(f"Case Fatality Rate (%) : {cfr:.2f}%")
 ```
 
-### Task 8: Month Summary Function
+### Task 8: Write a function to display COVID-19 summary statistics for any given month.
 ```
 def month_summary(month):
     # Filter the dataframe for the selected month
