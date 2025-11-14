@@ -1,7 +1,6 @@
 # 🦠 COVID-19 Data Analysis using Python
 
 A complete Exploratory Data Analysis (EDA) and visualization project on global COVID-19 data using Python, Pandas, Matplotlib, and Seaborn.
-
 This project answers key analytical questions about the spread, impact, and recovery trends of COVID-19 across different countries and time periods.
 
 ## 📌 Project Overview
@@ -16,15 +15,17 @@ The analysis is performed using the dataset: [Covid19data.xlsx](https://github.c
 The analysis is performed using the dataset: [Covid19data.xlsx](https://github.com/gulrez-zaidi/covid19-data-analysis-python/blob/main/Covid19data.xlsx)
 
 Below is the code used to import the dataset after cloning the repo:
-
+```
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+```
 
 **Load dataset from the repo**
+```
 df = pd.read_excel("Covid19data.xlsx")
 df.head()
-
+```
 
 ## 🎯 Key Tasks Completed
 ### Task 1: 3 Most Affected Countries
@@ -233,8 +234,8 @@ def month_summary(month):
 
 ## 🛠️ Technologies Used
 
-**Python**
-**Pandas**
-**NumPy**
-**Matplotlib**
-**Jupyter Notebook**
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Matplotlib**
+- **Jupyter Notebook**
