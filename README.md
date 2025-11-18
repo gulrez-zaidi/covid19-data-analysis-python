@@ -8,8 +8,6 @@ This project answers key analytical questions about the spread, impact, and reco
 This project analyzes global COVID-19 data by exploring confirmed cases, deaths, recoveries, monthly trends, country-wise summaries, and recovery rates.
 It includes both visualizations and custom functions to generate summary statistics for any selected country or month.
 
-The analysis is performed using the dataset: [Covid19data.xlsx](https://github.com/gulrez-zaidi/covid19-data-analysis-python/blob/main/Covid19data.xlsx)
-
 ## 📁 Dataset
 
 The analysis is performed using the dataset: [Covid19data.xlsx](https://github.com/gulrez-zaidi/covid19-data-analysis-python/blob/main/Covid19data.xlsx)
